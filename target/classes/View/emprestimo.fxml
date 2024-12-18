@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EmprestimoController">
+    <!-- Título -->
+    <Label text="Empréstimo de Livros" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <!-- Campo para o RA do aluno -->
+    <Label text="RA do Aluno:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+      <font>
+         <Font name="System Bold Italic" size="12.0" />
+      </font></Label>
+    <TextField fx:id="campoCodigoAluno" promptText="Insira o RA do aluno" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <!-- Campo para o ISBN do livro -->
+    <Label text="Código (ISBN) do Livro:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+      <font>
+         <Font name="System Bold Italic" size="12.0" />
+      </font></Label>
+    <TextField fx:id="campoCodigoLivro" promptText="Insira o ISBN do livro" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <!-- Botão para adicionar livro -->
+    <Button fx:id="botaoAdicionarLivro" onAction="#adicionarLivro" text="Adicionar Livro" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <!-- Lista de livros adicionados -->
+    <Label text="Livros Adicionados:" GridPane.columnIndex="0" GridPane.rowIndex="4">
+      <font>
+         <Font name="System Bold Italic" size="12.0" />
+      </font></Label>
+    <ListView fx:id="listaLivrosAdicionados" prefHeight="150" prefWidth="300" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+    <!-- Data de Empréstimo -->
+    <Label text="Data de Empréstimo:" GridPane.columnIndex="0" GridPane.rowIndex="5">
+      <font>
+         <Font name="System Bold Italic" size="12.0" />
+      </font></Label>
+    <DatePicker fx:id="pickerDataEmprestimo" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+    <!-- Botão para concluir empréstimo -->
+    <Button fx:id="botaoConcluirEmprestimo" onAction="#concluirEmprestimo" text="Concluir Empréstimo" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+   <Button mnemonicParsing="false" onAction="#voltarAoMenu" text="Menu" GridPane.rowIndex="8" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+</GridPane>

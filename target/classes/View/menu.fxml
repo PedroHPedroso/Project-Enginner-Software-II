@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="500.0" prefWidth="800.0" spacing="10.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Menu1Controller">
+  <children>
+    <!-- MenuBar na parte superior -->
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Biblioteca">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#cadastrarLivro" text="Novo" />
+                  <MenuItem mnemonicParsing="false" onAction="#registrarDevolucao" text="Devolução" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Aluno">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#cadastrarAluno" text="Cadastrar Aluno" />
+          </items>
+        </Menu>
+            <Menu mnemonicParsing="false" text="Debito">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#debito" text="Atribuir debito" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Emprestimo">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#emprestimo" text="Fazer emprestimo" />
+               </items>
+            </Menu>
+        <Menu mnemonicParsing="false" text="Sair">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#sair" text="Sair" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+
+    <!-- Título Principal -->
+    <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 10px;" text="Bem-vindo ao Sistema de Gerenciamento" />
+
+    <!-- Área dinâmica para conteúdo -->
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-border-color: #cccccc; -fx-border-width: 1; -fx-border-radius: 5; -fx-padding: 10;" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fitHeight="414.0" fitWidth="551.0" layoutX="221.0" layoutY="10.0" opacity="0.44" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo-uenp.png" />
+               </image>
+            </ImageView>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
